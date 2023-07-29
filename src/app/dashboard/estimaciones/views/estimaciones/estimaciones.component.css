@@ -1,0 +1,21 @@
+.mat-card-selected {
+  height: 200px; /* Altura fija del mat-card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+mat-card-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+/* Estilo para el h1 dentro del mat-card */
+.mat-card-selected h1 {
+    padding:5px;
+  font-size: 50px; /* Tamaño de fuente más grande */
+  margin: 0; /* Eliminar márgenes predeterminados */
+font-weight: bold;
+}

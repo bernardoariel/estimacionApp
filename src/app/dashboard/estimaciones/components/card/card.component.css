@@ -1,0 +1,33 @@
+.card-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image-container {
+    position: relative;
+}
+
+.img-fluid {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    /* Tamaño de fuente ajustable según tus necesidades */
+    color: white;
+    /* Color del texto */
+    font-weight: bold;
+    /* Opcional: aplica negrita al texto */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Opcional: añade sombra al texto */
+}

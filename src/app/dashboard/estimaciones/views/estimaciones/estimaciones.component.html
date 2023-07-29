@@ -1,0 +1,29 @@
+<div class="row mt-3">
+
+  <mat-card class="mat-card-selected bg-warning">
+    <mat-card-title>Camiseta Seleccionada</mat-card-title>
+    <mat-card-content>
+      <h1>{{ tallaSeleccionada | uppercase }}</h1>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+
+<div class="row d-flex">
+
+  <ng-container *ngFor="let tallaKey of tallasDataKeys">
+    
+    <div class="col d-flex align-items-center justify-content-center">
+      
+      <ng-container *ngIf="tallasData[tallaKey] as tallaData">
+        <estimaciones-card  class="w-100" 
+          [tallaData]="tallaData" 
+          [talla]="tallaData.letters" 
+          (click)="seleccionarSize(tallaData.letters)" />
+      </ng-container>
+
+    </div>
+
+  </ng-container>
+
+</div>

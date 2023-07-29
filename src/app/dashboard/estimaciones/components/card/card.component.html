@@ -1,0 +1,16 @@
+<mat-card  class="mt-5" [ngClass]="tallaData.letters === tallaSeleccionada ? 'bg-dark' : ''">
+
+  <mat-card-content>
+    
+    <div class="card-container" [style.height]="cardHeight">
+
+      <div class="image-container ">
+        <img  [src]="img" alt="" class="img-fluid" [style.width]="tallaData.width">
+        <div class="text-overlay" [ngStyle]="{ 'font-size': tallaData.fontSize }" >{{ talla | uppercase}}</div>
+      </div>
+
+    </div>
+
+  </mat-card-content>
+
+</mat-card>

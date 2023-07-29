@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="centered-content">
+    <mat-card class="custom-card">
+      <mat-card-title class="m-4">Ingresar su nombre</mat-card-title>
+      <mat-card-content>
+        <!-- Primer input -->
+        <div class="input-container">
+          <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Ingresar su nombre" value="" #txtUser >
+          </mat-form-field>
+
+        </div>
+        
+        <!-- Segundo input - Solo se muestra si no es admin -->
+        <div class="input-container">
+          <mat-form-field class="example-full-width">
+            <mat-label>Sprint Nro</mat-label>
+            <input matInput placeholder="Ingresar nro de Sprint" #txtSprint [disabled]="!isAdmin">
+          </mat-form-field>
+        </div>
+
+         <p class="error-message" *ngIf="estadoActual == 'noiniciado' && !isAdmin" [ngStyle]="{ color: 'red' }">Todavía no se ha iniciado la sala</p>
+      </mat-card-content>
+      <mat-card-actions class="d-flex justify-content-end">
+        <!-- Botón de ingresar o crear sprint según el isAdmin -->
+        <button mat-flat-button *ngIf="!isAdmin" (click)="ingresar(txtUser.value)">Ingresar</button>
+        <button mat-flat-button *ngIf="isAdmin" (click)="crearSprint(txtSprint.value)">Crear Sprint</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
